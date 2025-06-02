@@ -71,18 +71,17 @@ TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 TWILIO_AUTH_TOKEN=your_auth_token_here
 
 # The Twilio Assistant SID you built in the console
-TWILIO_ASSISTANT_SID=UAxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+TWILIO_ASSISTANT_SID=aiaxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # A Twilio Voice-capable “From” number, in E.164 format
-TWILIO_FROM_NUMBER=+1xxxxxxxxxx
+TWILIO_FROM_NUMBER=+xxxxxxxxxx
 
-# Your public ngrok HTTPS URL (e.g. abcdef1234.ngrok.io), used for Twilio webhooks
-NGROK_URL=abcdef1234.ngrok.io
+# Your public ngrok HTTPS URL (e.g. abcdef1234.ngrok.io, remove the https://), used for Twilio webhooks
+NGROK_URL=xxxx.ngrok.io
 Important:
 
-Do not commit .env to version control.
-
 Make sure NGROK_URL matches your live ngrok tunnel (if you run ngrok http 4000, note the xxxxxx.ngrok.io subdomain).
+you can use any other method, whataver make your localhost reachable outside.
 
 3. Install backend dependencies
 bash
