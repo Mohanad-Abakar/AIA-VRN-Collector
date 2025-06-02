@@ -21,6 +21,9 @@ If a customer booked airport parking without supplying their car’s registratio
 
 ---
 
+![Flow](HX-Outbound-VRN-Collection.png)
+
+
 ## ⚙️ Features
 
 - **One-click upload** of any Excel/CSV with arbitrary column headers: the backend will detect “Phone,” “Booking ID,” “Customer Name,” “Booking Details,” etc., normalize each row, and save it.
