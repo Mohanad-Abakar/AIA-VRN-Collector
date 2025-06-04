@@ -64,9 +64,7 @@ cd twilio-vrn-collector
 2. Create a .env file (backend)
 Inside the project root (same folder as server.js), create a file named .env containing:
 
-ini
-Copy
-Edit
+
 # .env (in the repo root)
 
 # Your Twilio Account SID & Auth Token
@@ -87,16 +85,12 @@ Make sure NGROK_URL matches your live ngrok tunnel (if you run ngrok http 4000, 
 you can use any other method, whataver make your localhost reachable outside.
 
 3. Install backend dependencies
-bash
-Copy
-Edit
+
 npm install
 (This pulls in Express, cors, multer, xlsx, body-parser, twilio, etc.)
 
 4. Install frontend dependencies
-bash
-Copy
-Edit
+
 cd frontend
 npm install
 (This pulls in React, ReactDOM, react-scripts, and other npm packages.)
@@ -107,9 +101,7 @@ You must run both the backend (port 4000) and the React frontend (port 3000) sim
 A) Start the Node/Express backend
 From the repo root (where server.js lives):
 
-bash
-Copy
-Edit
+
 node server.js
 The server will listen on port 4000 by default (unless PORT is set in .env).
 
@@ -134,18 +126,14 @@ GET /api/download → download entire data as CSV
 B) Expose backend via ngrok
 In a separate terminal, run:
 
-bash
-Copy
-Edit
+
 ngrok http 4000
 Copy the HTTPS URL it gives you (e.g. https://abcdef1234.ngrok.io) and ensure that exact string is set in your .env as NGROK_URL.
 
 C) Start the React frontend
 In another terminal, go into the frontend folder and run:
 
-bash
-Copy
-Edit
+
 npm start
 React will start on http://localhost:3000.
 
@@ -230,9 +218,7 @@ Spreadsheet parsing fails → Ensure the uploaded file has at least one row of d
 PATCH /api/updateRecord/:bookingId 404 → Check that each normalized row has a valid bookingId (either from your sheet’s “Booking ID” column or auto-generated).
 
 📦 Folder Structure
-pgsql
-Copy
-Edit
+
 twilio-vrn-collector/
 ├── server.js           ← Express backend entrypoint
 ├── data.json           ← App “database” (auto-created if missing)
@@ -250,9 +236,7 @@ twilio-vrn-collector/
 │   └── public/         ← CRA public assets
 └── README.md           ← (you’re reading it!)
 🔑 Environment Variables (in .env)
-ini
-Copy
-Edit
+
 TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 TWILIO_AUTH_TOKEN=your_auth_token_here
 TWILIO_ASSISTANT_SID=UAxxxxxxxxxxxxxxxxxxxxxxxxxxxx
